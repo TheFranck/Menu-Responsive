@@ -22,6 +22,7 @@ button:focus{
     background-color:blueviolet;
     position: fixed;
     width: 100%;
+    z-index: 5;
 }
 a{
     color: #fff;
@@ -99,7 +100,7 @@ nav a:hover{
         height: 50px;
     }
     .navigation.nav-style{
-        background-color: greenyellow;
+        background-color: #F9BF3B;
         box-shadow: 1px 1px 5px 1px rgba(0, 0,0,.3);
         height: 40px;
         line-height: 40px;
@@ -151,4 +152,121 @@ nav a:hover{
     nav.expand{
         height: 150px;
     }
+}
+
+/* Burger1 */
+
+.section2{
+    background-color: #22A7F0;
+    height: 500px;
+    padding-top: 150px; 
+    margin-top: 3rem;
+}
+.burger1{
+    width: 60px;
+    height: 45px;
+    /* background-color: red; */
+    margin: 50px auto;
+    cursor: pointer;
+    position: relative;
+}
+.burger1 span{
+    width: 100%;
+    height: 8px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: 0.2s ease-in-out;
+}
+.burger1 span:nth-child(1){
+    top: 0;
+}
+.burger1 span:nth-child(2){
+    top: 18px;
+}
+.burger1 span:nth-child(3){
+    top: 37px;
+}
+.burger1.active span:nth-child(2){
+    opacity: 0;
+    left: -100%;
+}
+.burger1.active span:nth-child(1){
+    transform: rotate(135deg);
+    top: 18px;
+}
+.burger1.active span:nth-child(3){
+    transform: rotate(-135deg);
+    top: 18px;
+}
+
+/* burger2 */
+
+.section3{
+    background-color: #26A65B;
+    height: 500px;
+    padding-top: 150px; 
+}
+.burger2{
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #F7CA18;
+    position: relative;
+    transition: 0.4s ease-in-out;
+}
+.burger2 span{
+    width: 52px;
+    height: 6px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+.burger2 span::before,
+.burger2 span::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 52px;
+    height: 6px;
+    background-color: #fff;
+    transition: 0.4s ease-in-out;
+}
+.burger2 span::before{
+    transform: translateY(-15px);
+}
+.burger2 span::after{
+    transform: translateY(15px);
+}
+.burger2:hover span::before{
+    transform: translateY(-18px);
+    transform-origin: top right;
+}
+.burger2:hover span::after{
+    transform: translateY(18px);
+    transform-origin: bottom right;
+}
+
+.burger2.active{
+    transform: rotate(90deg);
+}
+.burger2.active span::before,
+.burger2.active span::after{
+    width: 50%;
+}
+.burger2.active span::before{
+    transform: translateY(0);
+    transform: rotate(45deg);
+    
+}
+.burger2.active span::after{
+    transform: translateY(0);
+    transform: rotate(-45deg);
 }

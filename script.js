@@ -13,3 +13,20 @@ $(window).scroll(function(){
         $('.navigation, .logo').removeClass('nav-style');
     }
 });
+
+// burger1
+
+$(document).ready(function(){
+    var burger1 = $('.burger1');
+    burger1.click(function(){
+        $(this).toggleClass('active');
+    });
+});
+
+// burger2
+$(document).ready(function(){
+    var burger2 = $('.burger2');
+    burger2.click(function(){
+        $(this).toggleClass('active');
+    });
+});
