@@ -248,25 +248,97 @@ nav a:hover{
 .burger2:hover span::before{
     transform: translateY(-18px);
     transform-origin: top right;
+
 }
 .burger2:hover span::after{
     transform: translateY(18px);
     transform-origin: bottom right;
+
 }
 
 .burger2.active{
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 .burger2.active span::before,
 .burger2.active span::after{
     width: 50%;
+    
 }
 .burger2.active span::before{
     transform: translateY(0);
-    transform: rotate(45deg);
-    
+    transform: rotate(45deg); 
+    top: -10px;
+    right: -1px
 }
 .burger2.active span::after{
     transform: translateY(0);
     transform: rotate(-45deg);
+    top: 10px;
+    right: -1px;
+}
+.burger2.active:hover span::before,
+.burger2.active:hover span::after{
+    top: 0px;
+    right: 0;
+}
+
+.burger2.active svg{
+    transform: rotate(-180deg);
+}
+.burger2 circle{
+    fill: transparent; /* couleur du background du SVG */
+    stroke: #013243; /* Couleur de la border du SVG */ 
+    stroke-width: 3px; /* Epaisseur de la border du SVG */ 
+    stroke-dasharray: 302;
+    stroke-dashoffset: 302;
+    transition: .4s ease-in-out;
+    transition-delay: 0.4s;
+}
+.burger2.active circle{
+    stroke-dashoffset: 0;
+}
+
+/* Burger3 */
+
+.section4{
+    background-color: #F2784B;
+    height: 500px;
+    padding-top: 150px; 
+}
+.burger3{
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+.burger3 svg{
+    fill: none;
+    stroke: #86E2D5;
+    stroke-width: 2.7px;
+    stroke-linecap: round;
+}
+
+.burger3 .top{
+    stroke-dasharray: 40 251; 
+    transition: 0.6s ease-in-out;
+}
+.burger3 .middle{
+    stroke-dasharray: 40 0 ;
+    stroke-dashoffset: 40;
+    transition: 0.6s ease-in-out;
+}
+.burger3 .bottom{
+    stroke-dasharray: 40 310; 
+    transition: 0.6s ease-in-out;
+}
+.burger3.active .top{
+    stroke-dashoffset: -227;
+}
+.burger3.active .middle{
+    stroke-dasharray: 0 40; 
+    stroke-dashoffset: 20;
+}
+.burger3.active .bottom{
+    stroke-dashoffset: -287;
 }

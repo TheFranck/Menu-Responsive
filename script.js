@@ -21,12 +21,18 @@ $(document).ready(function(){
     burger1.click(function(){
         $(this).toggleClass('active');
     });
-});
 
-// burger2
-$(document).ready(function(){
+    // burger2
     var burger2 = $('.burger2');
     burger2.click(function(){
         $(this).toggleClass('active');
     });
+
+    
+    //burger3
+    var burger3 = $('.burger3');
+    burger3.click(function(){
+        $(this).toggleClass('active');
+    });
 });
+
